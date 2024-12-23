@@ -42,7 +42,7 @@ export default function SignupForm() {
       console.log("new wallet pkey from handle submit=", newwallet.privateKey);
 
       // Include the private key in the formData
-      const updatedFormData = { ...formData, pkey: mypkey };
+      const updatedFormData = { ...formData, role: "client", pkey: mypkey };
       console.log("Updated form data:", updatedFormData);
 
       setFormData(updatedFormData);
@@ -74,16 +74,6 @@ export default function SignupForm() {
         value={formData.password}
         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
       />
-      <br />
-      <br />
-      <select
-        value={formData.role}
-        onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-      >
-        <option value="">Select Role</option>
-        <option value="admin">Admin</option>
-        <option value="client">Client</option>
-      </select>
       <br />
       <br />
       <button class="button" type="submit">
