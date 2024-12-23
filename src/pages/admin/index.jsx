@@ -43,8 +43,7 @@ export default function AdminPage() {
 
   return (
     <div>
-      <h1>Welcome, Admin {username}!</h1>
-      <p>This is your personalized admin dashboard.</p>
+      <h1>Welcome, Admin!</h1>
 
       <h2>Users List</h2>
       <table
