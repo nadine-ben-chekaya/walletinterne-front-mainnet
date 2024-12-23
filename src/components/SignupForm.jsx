@@ -26,7 +26,6 @@ export default function SignupForm() {
       const address = walletInstance.address;
       const balance = await provider.getBalance(address);
       console.log("new wallet address=", walletInstance.address);
-      console.log("new wallet pkey=", walletInstance.privateKey);
       console.log("new wallet balance=", balance);
       return walletInstance;
     } catch (error) {
